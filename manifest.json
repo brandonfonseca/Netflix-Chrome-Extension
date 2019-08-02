@@ -1,15 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "My Cool Extension",
+  "name": "Netflix Ratings",
   "version": "0.1",
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "https://www.netflix.com/*"
       ],
       "js": ["jquery-3.4.1.min.js","content.js"]
     }
   ]
 }
-
-//"https://www.netflix.com/*", "http://www.netflix.com/*"
