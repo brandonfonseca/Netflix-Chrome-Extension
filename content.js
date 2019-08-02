@@ -1,4 +1,4 @@
-var past_title = ""
+var past_title = "";
 $(document).click(function() {
     const title_element_array = $('.title');
     const title_element = title_element_array[title_element_array.length - 1];
@@ -43,13 +43,30 @@ function injectData(ratings){
     var imdb_span = document.createElement("SPAN");
     var metascore_span = document.createElement("SPAN");
     var rotten_tomatoes_span = document.createElement("SPAN");
-    var imdb_score = document.createTextNode("   IMDB: " + ratings["IMDB"].toString());
-    var metascore = document.createTextNode("    Metascore: " + ratings["Metascore"].toString());
-    var rotten_tomatoes = document.createTextNode("   Rotten Tomatoes: " + ratings["Rotten Tomatoes"].toString());
+    var imdb_score = document.createTextNode(ratings["IMDB"].toString());
+    var metascore = document.createTextNode(ratings["Metascore"].toString());
+    var rotten_tomatoes = document.createTextNode(ratings["Rotten Tomatoes"].toString() + "%");
+    var imdb_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/IMDb_logo.svg/1280px-IMDb_logo.svg.png");
+    var metascore_logo = createLogo("https://pbs.twimg.com/profile_images/527528131171590144/EQXs3lpX_400x400.png");
+    var rotten_tomatoes_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png");
+
     imdb_span.appendChild(imdb_score);
     metascore_span.appendChild(metascore);
     rotten_tomatoes_span.appendChild(rotten_tomatoes);
+
+    node.appendChild(imdb_logo);
     node.appendChild(imdb_span);
-    node.appendChild(metascore_span)
-    node.appendChild(rotten_tomatoes_span)
+    node.appendChild(metascore_logo);
+    node.appendChild(metascore_span);
+    node.appendChild(rotten_tomatoes_logo);
+    node.appendChild(rotten_tomatoes_span);
+
+}
+function createLogo(logo_url){
+    var logo = document.createElement("IMG");
+    logo.setAttribute("width", "20");
+    logo.setAttribute("height", "20");
+    logo.setAttribute("src", logo_url);
+    logo.setAttribute("hspace", "2");
+    return logo;
 }
