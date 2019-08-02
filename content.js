@@ -1,7 +1,12 @@
+var past_title = ""
 $(document).click(function() {
     const title_element_array = $('.title');
     const title_element = title_element_array[title_element_array.length - 1];
     const title = title_element.getElementsByTagName('img')[0].alt;
+    if (title === past_title){
+        return
+    }
+    past_title = title;
     console.log(title);
     injectData(getRatings(title));
 });
@@ -36,11 +41,15 @@ function injectData(ratings){
     node_array = $('.video-meta ');
     node = node_array[node_array.length - 1];
     var imdb_span = document.createElement("SPAN");
-    var imdb_score = document.createTextNode("IMDB: " + ratings["IMDB"].toString());
-    var metascore = document.createTextNode("Metascore: " + ratings["Metascore"].toString());
-    var rotten_tomatoes = document.createTextNode("Rotten Tomatoes: " + ratings["Rotten Tomatoes"].toString());
+    var metascore_span = document.createElement("SPAN");
+    var rotten_tomatoes_span = document.createElement("SPAN");
+    var imdb_score = document.createTextNode("   IMDB: " + ratings["IMDB"].toString());
+    var metascore = document.createTextNode("    Metascore: " + ratings["Metascore"].toString());
+    var rotten_tomatoes = document.createTextNode("   Rotten Tomatoes: " + ratings["Rotten Tomatoes"].toString());
     imdb_span.appendChild(imdb_score);
-    imdb_span.appendChild(metascore);
-    imdb_span.appendChild(rotten_tomatoes);
+    metascore_span.appendChild(metascore);
+    rotten_tomatoes_span.appendChild(rotten_tomatoes);
     node.appendChild(imdb_span);
+    node.appendChild(metascore_span)
+    node.appendChild(rotten_tomatoes_span)
 }

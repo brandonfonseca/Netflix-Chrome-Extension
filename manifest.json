@@ -7,7 +7,8 @@
       "matches": [
         "https://www.netflix.com/*"
       ],
-      "js": ["jquery-3.4.1.min.js","content.js"]
+      "js": ["jquery-3.4.1.min.js","content.js"],
+      "css": ["styles.css"]
     }
   ]
 }
