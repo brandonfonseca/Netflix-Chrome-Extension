@@ -12,9 +12,12 @@ function getRatings(title) {
         const imdb_rating = data.imdbRating;
         const metescore = data.Metascore;
         const rotten_tomatoes_rating = getRottenTomatoScore(data);
-        console.log(imdb_rating);
-        console.log(metescore)
-        console.log(rotten_tomatoes_rating)
+        ratings = {
+            "IMDB": imdb_rating,
+            "Metascore": metescore,
+            "Rotten Tomatoes": rotten_tomatoes_rating
+        };
+        console.log(ratings);
     });
 
 }
