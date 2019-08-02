@@ -54,14 +54,21 @@ function injectData(ratings){
     metascore_span.appendChild(metascore);
     rotten_tomatoes_span.appendChild(rotten_tomatoes);
 
-    node.appendChild(imdb_logo);
-    node.appendChild(imdb_span);
-    node.appendChild(metascore_logo);
-    node.appendChild(metascore_span);
-    node.appendChild(rotten_tomatoes_logo);
-    node.appendChild(rotten_tomatoes_span);
+    if (ratings["IMDB"].toString() !== "N/A"){
+        node.appendChild(imdb_logo);
+        node.appendChild(imdb_span);
+    }
 
+    if (ratings["Metascore"].toString() !== "N/A"){
+        node.appendChild(metascore_logo);
+        node.appendChild(metascore_span);
+    }
+    if (ratings["Rotten Tomatoes"].toString() !== "N/A") {
+        node.appendChild(rotten_tomatoes_logo);
+        node.appendChild(rotten_tomatoes_span);
+    }
 }
+
 function createLogo(logo_url){
     var logo = document.createElement("IMG");
     logo.setAttribute("width", "20");
