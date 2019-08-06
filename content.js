@@ -1,4 +1,4 @@
-var past_title = "";
+let past_title = "";
 $(document).bind('DOMSubtreeModified', function() {
     const title_element_array = $('.title');
     const title_element = title_element_array[title_element_array.length - 1];
@@ -12,7 +12,7 @@ $(document).bind('DOMSubtreeModified', function() {
 });
 
 function getRatings(title) {
-    var xmlHttp = new XMLHttpRequest();
+    let xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://www.omdbapi.com/?apikey=***REMOVED***&t="+title, false );
     xmlHttp.send( null );
     data = JSON.parse(xmlHttp.response);
@@ -40,15 +40,15 @@ function getRottenTomatoScore(data) {
 function injectData(ratings){
     node_array = $('.video-meta ');
     node = node_array[node_array.length - 1];
-    var imdb_span = document.createElement("SPAN");
-    var metascore_span = document.createElement("SPAN");
-    var rotten_tomatoes_span = document.createElement("SPAN");
-    var imdb_score = document.createTextNode(ratings["IMDB"].toString());
-    var metascore = document.createTextNode(ratings["Metascore"].toString());
-    var rotten_tomatoes = document.createTextNode(ratings["Rotten Tomatoes"].toString() + "%");
-    var imdb_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/IMDb_logo.svg/1280px-IMDb_logo.svg.png");
-    var metascore_logo = createLogo("https://pbs.twimg.com/profile_images/527528131171590144/EQXs3lpX_400x400.png");
-    var rotten_tomatoes_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png");
+    const imdb_span = document.createElement("SPAN");
+    const metascore_span = document.createElement("SPAN");
+    const rotten_tomatoes_span = document.createElement("SPAN");
+    const imdb_score = document.createTextNode(ratings["IMDB"].toString());
+    const metascore = document.createTextNode(ratings["Metascore"].toString());
+    const rotten_tomatoes = document.createTextNode(ratings["Rotten Tomatoes"].toString() + "%");
+    const imdb_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/IMDb_logo.svg/1280px-IMDb_logo.svg.png");
+    const metascore_logo = createLogo("https://pbs.twimg.com/profile_images/527528131171590144/EQXs3lpX_400x400.png");
+    const rotten_tomatoes_logo = createLogo("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Rotten_Tomatoes.svg/1009px-Rotten_Tomatoes.svg.png");
 
     imdb_span.appendChild(imdb_score);
     metascore_span.appendChild(metascore);
@@ -70,7 +70,7 @@ function injectData(ratings){
 }
 
 function createLogo(logo_url){
-    var logo = document.createElement("IMG");
+    const logo = document.createElement("IMG");
     logo.setAttribute("width", "20");
     logo.setAttribute("height", "20");
     logo.setAttribute("src", logo_url);
