@@ -10,5 +10,9 @@
       "js": ["jquery-3.4.1.min.js","content.js"],
       "css": ["styles.css"]
     }
-  ]
+  ],
+  "icons": {
+    "128": "logo.png"
+  }
+
 }
