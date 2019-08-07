@@ -2,6 +2,8 @@
 
 This chrome extension displays IMDB, Metacritic, and Rotten Tomato ratings for movies and shows on Netflix.
 
+![image](screenshot.png)
+
 ## Usage
 
 If you simply want to use this chrome extension please download it from the Chrome Web Store using the following link: https://chrome.google.com/webstore/detail/netflix-ratings/cfkpapjmhefngppdllelhmpnjoonbfif?hl=en-US&gl=CA
