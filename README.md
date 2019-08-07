@@ -4,7 +4,7 @@ This chrome extension displays IMDB, Metacritic, and Rotten Tomato ratings for m
 
 ## Usage
 
-If you simply want to use this chrome extension please download it from the Chrome Web Store using the following link: 
+If you simply want to use this chrome extension please download it from the Chrome Web Store using the following link: https://chrome.google.com/webstore/detail/netflix-ratings/cfkpapjmhefngppdllelhmpnjoonbfif?hl=en-US&gl=CA
 
 
 ## Local Installation (Optional)
@@ -14,7 +14,7 @@ If you want to install the extension (and all of the source code) locally please
 
 2. Clone this repository into a local directory on your computer
 
-3. In the root directory of this project create a file called `config.json`. In this file add your API key (generated in step 1) using the following format:
+3. In the root directory of this project create a file called `config.json`. In this file add your API key (generated in step one) using the following format:
 
 ```
 {
@@ -24,10 +24,12 @@ If you want to install the extension (and all of the source code) locally please
 
 4. Load the extension onto chrome using the following steps:
     
-    I. Visit `Visit chrome://extensions`
-    II. Enable developer mode by flipping the switch in the top right corner
-    III. Click `Load unpacked`
-    IV. Select the extension directory from your local computer
+    <ol type='a'>
+    <li> Visit Visit "chrome://extensions"
+    <li> Enable developer mode by flipping the switch in the top right corner </li>
+    <li> Click "Load unpacked" </li>
+    <li> Select the extension directory from your local computer </li>
+    </ol>
     
     
 ## Limitations
