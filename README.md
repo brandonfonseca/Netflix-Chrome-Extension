@@ -24,10 +24,12 @@ If you want to install the extension (and all of the source code) locally please
 
 4. Load the extension onto chrome using the following steps:
     
-    I. Visit `Visit chrome://extensions`
-    II. Enable developer mode by flipping the switch in the top right corner
-    III. Click `Load unpacked`
-    IV. Select the extension directory from your local computer
+    <ol type='a'>
+    <li> Visit Visit "chrome://extensions"
+    <li> Enable developer mode by flipping the switch in the top right corner </li>
+    <li> Click "Load unpacked" </li>
+    <li> Select the extension directory from your local computer </li>
+    </ol>
     
     
 ## Limitations
