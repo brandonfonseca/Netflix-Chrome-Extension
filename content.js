@@ -1,4 +1,11 @@
+const url = chrome.runtime.getURL('config.json');
+let api_key = "";
 let past_title = "";
+
+fetch(url)
+    .then((response) => response.json()) //assuming file contains json
+    .then((data) => api_key = data["api_key"]);
+
 $(document).bind('DOMSubtreeModified', function() {
     const title_element_array = $('.title');
     const title_element = title_element_array[title_element_array.length - 1];
@@ -13,7 +20,7 @@ $(document).bind('DOMSubtreeModified', function() {
 
 function getRatings(title) {
     let xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "https://www.omdbapi.com/?apikey=c7f1bdfa&t="+title, false );
+    xmlHttp.open( "GET", `https://www.omdbapi.com/?apikey=${api_key}&t=${title}`, false );
     xmlHttp.send( null );
     data = JSON.parse(xmlHttp.response);
     const imdb_rating = data.imdbRating;
