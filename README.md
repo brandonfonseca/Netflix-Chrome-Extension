@@ -4,7 +4,7 @@ This chrome extension displays IMDB, Metacritic, and Rotten Tomato ratings for m
 
 ## Usage
 
-If you simply want to use this chrome extension please download it from the Chrome Web Store using the following link: `https://chrome.google.com/webstore/detail/netflix-ratings/cfkpapjmhefngppdllelhmpnjoonbfif?hl=en-US&gl=CA`
+If you simply want to use this chrome extension please download it from the Chrome Web Store using the following link: https://chrome.google.com/webstore/detail/netflix-ratings/cfkpapjmhefngppdllelhmpnjoonbfif?hl=en-US&gl=CA
 
 
 ## Local Installation (Optional)
