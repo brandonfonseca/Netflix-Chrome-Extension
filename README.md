@@ -14,7 +14,7 @@ If you want to install the extension (and all of the source code) locally please
 
 2. Clone this repository into a local directory on your computer
 
-3. In the root directory of this project create a file called `config.json`. In this file add your API key (generated in step 1) using the following format:
+3. In the root directory of this project create a file called `config.json`. In this file add your API key (generated in step one) using the following format:
 
 ```
 {
