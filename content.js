@@ -3,7 +3,7 @@ let api_key = "";
 let past_title = "";
 
 fetch(url)
-    .then((response) => response.json()) //assuming file contains json
+    .then((response) => response.json())
     .then((data) => api_key = data["api_key"]);
 
 $(document).bind('DOMSubtreeModified', function() {
