@@ -9,7 +9,14 @@ fetch(url)
 $(document).bind('DOMSubtreeModified', function() {
     const title_element_array = $('.title');
     const title_element = title_element_array[title_element_array.length - 1];
-    const title = title_element.getElementsByTagName('img')[0] && title_element.getElementsByTagName('img')[0].alt;
+    let title = "";
+    try {
+        title = title_element.getElementsByTagName('img')[0] && title_element.getElementsByTagName('img')[0].alt;
+    }
+    catch {
+        return;
+    }
+
     if (title === past_title){
         return
     }
